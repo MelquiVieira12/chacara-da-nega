@@ -1,3 +1,9 @@
+const STATUS_LABELS: Record<string, string> = {
+  pending: "Pendente",
+  confirmed: "Confirmada",
+  cancelled: "Cancelada",
+  completed: "Concluída",
+};
 import { createClient } from "@/lib/supabase/server";
 import LogoutButton from "./LogoutButton";
 
@@ -42,7 +48,7 @@ export default async function AdminDashboard() {
         {proximas?.map((r) => (
           <div key={r.id} className="rounded-lg border p-3">
             <p className="font-medium">{r.date} ({r.period}) — {r.customer_name}</p>
-            <p className="text-sm text-gray-500">{r.event_type} · {r.people_count ?? "?"} pessoas · R$ {Number(r.total_amount).toFixed(2)} · <span className="capitalize">{r.status}</span></p>
+            <p className="text-sm text-gray-500">{r.event_type} · {r.people_count ?? "?"} pessoas · R$ {Number(r.total_amount).toFixed(2)} ·<span>{STATUS_LABELS[r.status] ?? r.status}</span>
           </div>
         ))}
       </div>

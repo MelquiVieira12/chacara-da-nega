@@ -1,5 +1,6 @@
 import { createClient } from "@/lib/supabase/server";
 import BlockDateForm from "./BlockDateForm";
+import RemoveBlockedDate from "./RemoveBlockedDate";
 
 export default async function AdminBloqueios() {
   const supabase = createClient();
@@ -22,16 +23,10 @@ export default async function AdminBloqueios() {
               <p className="font-medium">{b.date}</p>
               {b.reason && <p className="text-sm text-gray-500">{b.reason}</p>}
             </div>
-            <UnblockButton id={b.id} />
+            <RemoveBlockedDate id={b.id} />
           </div>
         ))}
       </div>
     </main>
   );
 }
-
-function UnblockButton({ id }: { id: string }) {
-  return <RemoveBlockedDate id={id} />;
-}
-
-import RemoveBlockedDate from "./RemoveBlockedDate";

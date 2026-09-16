@@ -28,7 +28,9 @@ export default async function Servicos() {
         </p>
       )}
 
-      {categorias?.map((categoria: any) => (
+      {categorias
+  ?.filter((categoria: any) => categoria.products?.some((p: any) => p.is_active))
+  .map((categoria: any) => (
         <div key={categoria.id} className="mb-8">
           <h2 className="mb-3 text-lg font-semibold text-gray-800">{categoria.name}</h2>
           <div className="grid gap-3 sm:grid-cols-2">

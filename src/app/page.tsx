@@ -9,9 +9,7 @@ export default async function Home() {
     .single();
 
   const nome = settings?.name ?? "Chácara da Nega";
-  const descricao =
-    settings?.description ??
-    "Um espaço de lazer para você aproveitar seus momentos especiais com família e amigos. (dado de demonstração)";
+  const descricao = settings?.description ?? "Um espaço de lazer para você aproveitar seus momentos especiais com família e amigos. (dado de demonstração)";
   const whatsapp = settings?.whatsapp_number;
 
   return (
@@ -22,35 +20,17 @@ export default async function Home() {
         <p className="max-w-md text-gray-600">{descricao}</p>
 
         <div className="mt-4 flex flex-col gap-3 sm:flex-row">
-          
-            href="/reservar"
-            className="rounded-full bg-brand-600 px-6 py-3 font-medium text-white hover:bg-brand-700"
-          >
-            Consultar disponibilidade
-          </a>
+          <a href="/reservar" className="rounded-full bg-brand-600 px-6 py-3 font-medium text-white hover:bg-brand-700">Consultar disponibilidade</a>
           {whatsapp && (
-            
-              href={`https://wa.me/${whatsapp}`}
-              target="_blank"
-              className="rounded-full border border-brand-600 px-6 py-3 font-medium text-brand-700 hover:bg-brand-50"
-            >
-              Falar no WhatsApp
-            </a>
+            <a href={`https://wa.me/${whatsapp}`} target="_blank" className="rounded-full border border-brand-600 px-6 py-3 font-medium text-brand-700 hover:bg-brand-50">Falar no WhatsApp</a>
           )}
         </div>
       </section>
 
       <section className="grid grid-cols-2 gap-4 px-6 py-10 sm:grid-cols-4">
-        {["Piscina", "Churrasqueira", "Espaço para festas", "Mesas e cadeiras"].map(
-          (item) => (
-            <div
-              key={item}
-              className="flex h-24 items-center justify-center rounded-xl bg-gray-100 text-center text-sm font-medium text-gray-700"
-            >
-              {item}
-            </div>
-          )
-        )}
+        {["Piscina", "Churrasqueira", "Espaço para festas", "Mesas e cadeiras"].map((item) => (
+          <div key={item} className="flex h-24 items-center justify-center rounded-xl bg-gray-100 text-center text-sm font-medium text-gray-700">{item}</div>
+        ))}
       </section>
     </main>
   );

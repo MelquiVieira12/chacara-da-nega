@@ -4,6 +4,11 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Chácara da Nega",
   description: "Seu momento especial começa aqui.",
+  appleWebApp: { capable: true, statusBarStyle: "default", title: "Chácara da Nega" },
+};
+
+export const viewport = {
+  themeColor: "#2f9e5c",
 };
 
 export default function RootLayout({

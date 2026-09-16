@@ -110,7 +110,7 @@ export default function ReservationWizard({ categorias, whatsappNumber }: { cate
         <p className="mb-2 text-lg font-semibold text-brand-700">Solicitação enviada!</p>
         <p className="mb-4 text-sm text-gray-600">Sua solicitação foi registrada. A confirmação final depende da proprietária. Toque no botão abaixo para enviar os detalhes pelo WhatsApp.</p>
         {link ? (
-          <a href={link} target="_blank" className="inline-block rounded-full bg-brand-600 px-6 py-3 font-medium text-white hover:bg-brand-700">Abrir WhatsApp</a>
+          <a href={link} className="inline-block rounded-full bg-brand-600 px-6 py-3 font-medium text-white hover:bg-brand-700">Abrir WhatsApp</a>
         ) : (
           <p className="text-sm text-red-600">Número de WhatsApp ainda não configurado no painel administrativo.</p>
         )}

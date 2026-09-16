@@ -13,7 +13,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR">
-      <body className="bg-white text-gray-900 antialiased">{children}</body>
+      <body className="bg-white text-gray-900 antialiased">
+        <nav className="flex items-center justify-center gap-6 border-b px-4 py-3 text-sm font-medium text-gray-600">
+          <a href="/" className="hover:text-brand-700">Início</a>
+          <a href="/servicos" className="hover:text-brand-700">Serviços</a>
+          <a href="/galeria" className="hover:text-brand-700">Galeria</a>
+          <a href="/regras" className="hover:text-brand-700">Regras</a>
+        </nav>
+        {children}
+      </body>
     </html>
   );
 }

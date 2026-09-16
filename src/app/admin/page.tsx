@@ -17,10 +17,13 @@ export default async function AdminDashboard() {
 
   return (
     <main className="mx-auto max-w-3xl px-6 py-10">
-      <div className="mb-6 flex items-center justify-between">
-        <h1 className="text-2xl font-bold text-brand-700">Painel administrativo</h1>
-        <LogoutButton />
-      </div>
+              <div className="mb-6 flex items-center justify-between">
+          <h1 className="text-2xl font-bold text-brand-700">Painel administrativo</h1>
+          <div className="flex items-center gap-3">
+            <a href="/admin/reservas" className="text-sm font-medium text-brand-700 underline">Ver todas as reservas</a>
+            <LogoutButton />
+          </div>
+        </div>
 
       <div className="mb-8 grid grid-cols-2 gap-4">
         <div className="rounded-xl border p-4 text-center">

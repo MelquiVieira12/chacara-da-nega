@@ -20,9 +20,9 @@ export default function NewImageForm() {
     const nomeArquivo = `${Date.now()}-${file.name.replace(/[^a-zA-Z0-9.]/g, "_")}`;
     const { error: uploadError } = await supabase.storage.from("gallery").upload(nomeArquivo, file);
 
-        if (uploadError) {
+            if (uploadError) {
       setUploading(false);
-      setErrorMsg(`Erro: ${uploadError.message}`);
+      setErrorMsg("Não foi possível enviar a foto. Tente novamente.");
       return;
     }
 

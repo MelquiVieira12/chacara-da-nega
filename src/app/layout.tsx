@@ -25,7 +25,10 @@ export default function RootLayout({
           <a href="/galeria" className="hover:text-brand-700">Galeria</a>
           <a href="/regras" className="hover:text-brand-700">Regras</a>
         </nav>
-        {children}
+              {children}
+        <footer className="mt-10 border-t px-4 py-6 text-center text-xs text-gray-400">
+          <a href="/admin/login" className="hover:text-gray-600">Área administrativa</a>
+        </footer>
       </body>
     </html>
   );

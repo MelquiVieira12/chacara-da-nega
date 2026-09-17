@@ -1,3 +1,9 @@
+const STATUS_LABELS: Record<string, string> = {
+  pending: "Pendente",
+  confirmed: "Confirmada",
+  cancelled: "Cancelada",
+  completed: "Concluída",
+};
 import { createClient } from "@/lib/supabase/server";
 import ReservationActions from "./ReservationActions";
 
@@ -23,7 +29,7 @@ export default async function AdminReservas() {
           <div key={r.id} className="rounded-lg border p-4">
             <div className="flex items-center justify-between">
               <p className="font-medium">{r.date} ({r.period}) — {r.customer_name}</p>
-              <span className="rounded-full bg-gray-100 px-2 py-1 text-xs capitalize">{r.status}</span>
+              <span className="rounded-full bg-gray-100 px-2 py-1 text-xs">{STATUS_LABELS[r.status] ?? r.status}</span>
             </div>
             <p className="text-sm text-gray-500">{r.customer_phone} · {r.event_type} · {r.people_count ?? "?"} pessoas</p>
             <ul className="ml-4 mt-1 list-disc text-sm text-gray-600">

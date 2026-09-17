@@ -19,7 +19,7 @@ export default async function AdminCategorias() {
         {(categorias ?? []).map((c) => (
           <div key={c.id} className="flex items-center justify-between rounded-lg border p-3">
             <p className={c.is_active ? "" : "text-gray-400 line-through"}>{c.name}</p>
-            <CategoryToggle id={c.id} isActive={c.is_active} />
+            <CategoryToggle id={c.id} isActive={c.is_active} name={c.name} />
           </div>
         ))}
       </div>

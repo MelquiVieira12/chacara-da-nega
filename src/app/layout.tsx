@@ -5,6 +5,10 @@ export const metadata: Metadata = {
   title: "Chácara da Nega",
   description: "Seu momento especial começa aqui.",
   appleWebApp: { capable: true, statusBarStyle: "default", title: "Chácara da Nega" },
+  icons: {
+    icon: "https://kmpegsmccgycgtwqnjpv.supabase.co/storage/v1/object/public/assets/ChatGPT%20Image%2016%20de%20set.%20de%202026,%2021_01_43.png",
+    apple: "https://kmpegsmccgycgtwqnjpv.supabase.co/storage/v1/object/public/assets/ChatGPT%20Image%2016%20de%20set.%20de%202026,%2021_01_43.png",
+  },
 };
 
 export const viewport = {

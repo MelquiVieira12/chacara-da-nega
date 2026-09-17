@@ -15,6 +15,12 @@ export default async function Home() {
   return (
     <main className="flex min-h-screen flex-col">
       <section className="flex flex-col items-center justify-center gap-4 bg-brand-50 px-6 py-20 text-center">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="https://kmpegsmccgycgtwqnjpv.supabase.co/storage/v1/object/public/assets/ChatGPT%20Image%2016%20de%20set.%20de%202026,%2021_01_43.png"
+          alt="Chácara da Nega"
+          className="mb-2 h-32 w-auto"
+        />
         <h1 className="text-4xl font-bold text-brand-700">{nome}</h1>
         <p className="text-lg text-brand-600">Seu momento especial começa aqui.</p>
         <p className="max-w-md text-gray-600">{descricao}</p>
@@ -22,7 +28,7 @@ export default async function Home() {
         <div className="mt-4 flex flex-col gap-3 sm:flex-row">
           <a href="/reservar" className="rounded-full bg-brand-600 px-6 py-3 font-medium text-white hover:bg-brand-700">Consultar disponibilidade</a>
           {whatsapp && (
-            <a href={`https://wa.me/${whatsapp}`} target="_blank" className="rounded-full border border-brand-600 px-6 py-3 font-medium text-brand-700 hover:bg-brand-50">Falar no WhatsApp</a>
+            <a href={`https://wa.me/${whatsapp}`} className="rounded-full border border-brand-600 px-6 py-3 font-medium text-brand-700 hover:bg-brand-50">Falar no WhatsApp</a>
           )}
         </div>
       </section>

@@ -86,8 +86,9 @@ export default function ReservationWizard({ categorias, whatsappNumber }: { cate
       });
 
       if (error) {
-        if (error.message?.includes("DATA_BLOQUEADA")) setErrorMsg("Essa data foi bloqueada enquanto você preenchia o formulário. Escolha outra data.");
+                if (error.message?.includes("DATA_BLOQUEADA")) setErrorMsg("Essa data foi bloqueada enquanto você preenchia o formulário. Escolha outra data.");
         else if (error.message?.includes("ESTOQUE_INSUFICIENTE")) setErrorMsg("A disponibilidade mudou enquanto você preenchia o formulário. Volte e ajuste as quantidades.");
+        else if (error.message?.includes("CONFLITO_AREA_EXCLUSIVA")) setErrorMsg("Essa área já está reservada nesse turno (a chácara inteira e as áreas avulsas não podem ser reservadas ao mesmo tempo). Escolha outra data ou turno.");
         else setErrorMsg("Não foi possível enviar a solicitação. Tente novamente.");
         return;
       }

@@ -1,13 +1,23 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
+const LOGO_URL = "https://kmpegsmccgycgtwqnjpv.supabase.co/storage/v1/object/public/assets/ChatGPT%20Image%2016%20de%20set.%20de%202026,%2021_01_43.png";
+
 export const metadata: Metadata = {
   title: "Chácara da Nega",
   description: "Seu momento especial começa aqui.",
   appleWebApp: { capable: true, statusBarStyle: "default", title: "Chácara da Nega" },
-  icons: {
-    icon: "https://kmpegsmccgycgtwqnjpv.supabase.co/storage/v1/object/public/assets/ChatGPT%20Image%2016%20de%20set.%20de%202026,%2021_01_43.png",
-    apple: "https://kmpegsmccgycgtwqnjpv.supabase.co/storage/v1/object/public/assets/ChatGPT%20Image%2016%20de%20set.%20de%202026,%2021_01_43.png",
+  icons: { icon: LOGO_URL, apple: LOGO_URL },
+  openGraph: {
+    title: "Chácara da Nega",
+    description: "Seu momento especial começa aqui.",
+    images: [LOGO_URL],
+  },
+  twitter: {
+    card: "summary",
+    title: "Chácara da Nega",
+    description: "Seu momento especial começa aqui.",
+    images: [LOGO_URL],
   },
 };
 

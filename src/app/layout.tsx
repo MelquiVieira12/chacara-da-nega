@@ -23,14 +23,17 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body className="bg-white text-gray-900 antialiased">
-        <nav className="flex items-center justify-between border-b px-4 py-3 text-sm font-medium text-gray-600">
-          <div className="flex gap-6">
+               <nav className="flex flex-wrap items-center justify-between gap-3 border-b px-4 py-3 text-sm font-medium text-gray-600">
+          <div className="flex flex-wrap gap-4 sm:gap-6">
             <a href="/" className="hover:text-brand-700">Início</a>
             <a href="/servicos" className="hover:text-brand-700">Serviços</a>
             <a href="/galeria" className="hover:text-brand-700">Galeria</a>
             <a href="/regras" className="hover:text-brand-700">Regras</a>
           </div>
-          <a href="/admin/login" className="rounded-full bg-brand-600 px-4 py-2 text-white hover:bg-brand-700">Painel administrativo</a>
+          <a href="/admin/login" className="whitespace-nowrap rounded-full bg-brand-600 px-4 py-2 text-white hover:bg-brand-700">
+            <span className="hidden sm:inline">Painel administrativo</span>
+            <span className="sm:hidden">Admin</span>
+          </a>
         </nav>
                       {children}
       </body>

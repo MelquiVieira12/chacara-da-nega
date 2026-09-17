@@ -24,7 +24,7 @@ export default async function AdminDashboard() {
 
   return (
     <main className="mx-auto max-w-3xl px-6 py-10">
-      <div className="mb-6 flex items-center justify-between">
+            <div className="mb-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
         <h1 className="text-2xl font-bold text-brand-700">Painel administrativo</h1>
         <div className="flex items-center gap-3">
           <a href="/admin/reservas" className="text-sm font-medium text-brand-700 underline">Ver todas as reservas</a>

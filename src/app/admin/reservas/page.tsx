@@ -1,11 +1,12 @@
+import { createClient } from "@/lib/supabase/server";
+import ReservationActions from "./ReservationActions";
+
 const STATUS_LABELS: Record<string, string> = {
   pending: "Pendente",
   confirmed: "Confirmada",
   cancelled: "Cancelada",
   completed: "Concluída",
 };
-import { createClient } from "@/lib/supabase/server";
-import ReservationActions from "./ReservationActions";
 
 export default async function AdminReservas() {
   const supabase = createClient();

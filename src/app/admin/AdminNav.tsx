@@ -1,7 +1,8 @@
 export default function AdminNav() {
-  const links = [
+    const links = [
     { href: "/admin", label: "Início" },
     { href: "/admin/reservas", label: "Reservas" },
+    { href: "/admin/calendario", label: "Calendário" },
     { href: "/admin/bloqueios", label: "Bloqueio de datas" },
     { href: "/admin/categorias", label: "Categorias" },
     { href: "/admin/produtos", label: "Produtos" },
